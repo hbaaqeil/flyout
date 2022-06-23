@@ -21,6 +21,8 @@ public class SingleTest extends BrowserStackTestNGTest {
         WebElement element4 = driver.findElement(By.name("adult1-l"));
         element4.sendKeys("Baaqeil");
         Thread.sleep(2000);
+        WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
+        driver = (RemoteWebDriver) new Augmenter().augment(driver);
         ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         element1.submit();
         Thread.sleep(2000);
