@@ -21,7 +21,6 @@ public class SingleTest extends BrowserStackTestNGTest {
         WebElement element4 = driver.findElement(By.name("adult1-l"));
         element4.sendKeys("Baaqeil");
         Thread.sleep(2000);
-        driver.getScreenshotAs(OutputType.FILE);
         element1.submit();
         Thread.sleep(2000);
         String titleMsg = driver.getTitle().substring(0,22);
