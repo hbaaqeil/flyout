@@ -1,0 +1,26 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "hasanbaaqeil_Wtarme",
+  "key": "wSjYxBg5GttnDBqs5q3P",
+
+  "capabilities": {
+    "build": "TestNG Demo HBAAQEIL",
+    "name": "parallel_test",
+    "browserstack.debug": true
+  },
+
+  "environments": {
+    "chrome": {
+      "browser": "chrome"
+    },
+    "firefox": {
+      "browser": "firefox"
+    },
+    "edge": {
+      "browser": "edge"
+    },
+    "ie": {
+      "browser": "internet explorer"
+    }
+  }
+}
