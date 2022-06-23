@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class SingleTest extends BrowserStackTestNGTest {
 
-    @Test("Sending booking data and submitting the form! Test")
+    @Test(description = "Sending booking data and submitting the form! Test")
     public void test() throws Exception {
         driver.get("http://54.76.177.255/forms/");
         WebElement element1 = driver.findElement(By.id("mobile"));
