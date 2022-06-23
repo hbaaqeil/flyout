@@ -10,14 +10,18 @@ public class SingleTest extends BrowserStackTestNGTest {
 
     @Test
     public void test() throws Exception {
-        driver.get("http://34.246.169.246:8080/");
-        WebElement element1 = driver.findElement(By.name("j_username"));
-        element1.sendKeys("hbaaqeil");
-        WebElement element2 = driver.findElement(By.name("j_password"));
-        element2.sendKeys("Hba@@--01");
+        driver.get("http://54.76.177.255/forms/");
+        WebElement element1 = driver.findElement(By.id("mobile"));
+        element1.sendKeys("0565133578");
+        WebElement element2 = driver.findElement(By.id("email"));
+        element2.sendKeys("ahbaaqeil@gmail.com");
+        WebElement element3 = driver.findElement(By.id("adult1-f"));
+        element3.sendKeys("Hassan");
+        WebElement element4 = driver.findElement(By.name("adult1-l"));
+        element4.sendKeys("Baaqeil");
         element1.submit();
         Thread.sleep(5000);
-
-        Assert.assertEquals("Dashboard [Jenkins]", driver.getTitle());
+        String titleMsg = driver.getTitle().substring(0,22)
+        Assert.assertEquals("Form Successfully Sent", titleMsg);
     }
 }
