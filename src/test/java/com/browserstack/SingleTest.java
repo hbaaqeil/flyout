@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
-public class SingleTest extends BrowserStackTestNGTest {
+public class FillFormAndSubmit extends BrowserStackTestNGTest {
 
     @Test(description = "Sending booking data and submitting the form! Test")
     public void test() throws Exception {
