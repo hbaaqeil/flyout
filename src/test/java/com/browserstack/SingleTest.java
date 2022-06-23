@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.selenium.OutputType;
+import org.testng.OutputType;
 public class SingleTest extends BrowserStackTestNGTest {
 
     @Test(description = "Sending booking data and submitting the form! Test")
