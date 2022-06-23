@@ -5,7 +5,7 @@
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="chrome"/>
         <classes>
-            <class name="com.browserstack.SingleTest"/>
+            <class name="com.browserstack.FillFormAndSubmit"/>
         </classes>
     </test>
 
@@ -13,14 +13,14 @@
         <parameter name="config" value="parallel.conf.json"/>
         <parameter name="environment" value="firefox"/>
         <classes>
-            <class name="com.browserstack.SingleTest"/>
+            <class name="com.browserstack.FillFormAndSubmit"/>
         </classes>
     </test>
      <test name="SingleTestEdge">
             <parameter name="config" value="parallel.conf.json"/>
             <parameter name="environment" value="edge"/>
             <classes>
-                <class name="com.browserstack.SingleTest"/>
+                <class name="com.browserstack.FillFormAndSubmit"/>
             </classes>
         </test>
 
@@ -28,7 +28,7 @@
             <parameter name="config" value="parallel.conf.json"/>
             <parameter name="environment" value="ie"/>
             <classes>
-                <class name="com.browserstack.SingleTest"/>
+                <class name="com.browserstack.FillFormAndSubmit"/>
             </classes>
         </test>
   
