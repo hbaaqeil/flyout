@@ -25,5 +25,11 @@ public class SingleTest extends BrowserStackTestNGTest {
         Thread.sleep(2000);
         String titleMsg = driver.getTitle().substring(0,22);
         Assert.assertEquals("Form Successfully Sent", titleMsg);
+    }        
+
+    @AfterMethod(alwaysRun = true)
+    public void closeBrowser(){
+        System.out.println("Closing down the browser");
+        driver.close();
     }
 }
