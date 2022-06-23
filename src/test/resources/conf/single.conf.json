@@ -4,7 +4,7 @@
   "key": "wSjYxBg5GttnDBqs5q3P",
 
   "capabilities": {
-    "build": "TestNG Demo HBAAQEIL",
+    "build": "testing-flyout-browserstack",
     "name": "single_test",
     "browserstack.debug": true
   },
