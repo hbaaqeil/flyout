@@ -21,7 +21,7 @@ public class SingleTest extends BrowserStackTestNGTest {
         element4.sendKeys("Baaqeil");
         element1.submit();
         Thread.sleep(5000);
-        String titleMsg = driver.getTitle().substring(0,22)
+        String titleMsg = driver.getTitle().substring(0,22);
         Assert.assertEquals("Form Successfully Sent", titleMsg);
     }
 }
