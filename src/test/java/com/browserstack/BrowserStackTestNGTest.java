@@ -69,7 +69,7 @@ public class BrowserStackTestNGTest {
         
         String buildName  = System.getenv("BROWSERSTACK_BUILD_NAME");
         if(buildName == null) {
-            String buildName =  "jenkins-FlyOutTestNG-52";
+           
             String build =  "jenkins-FlyOutTestNG-52";
         }
 
