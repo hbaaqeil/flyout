@@ -68,7 +68,7 @@ public class BrowserStackTestNGTest {
             accessKey = (String) config.get("key");
         }
         
-        buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
+        String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
         capabilities.setCapability("build", buildName);
        
         
