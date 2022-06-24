@@ -34,7 +34,7 @@ public class FillFormAndSubmit extends BrowserStackTestNGTest {
     @Test(description = "Sending booking data and submitting the form! Assert2")
     public void test1() throws Exception {
        String nameMsg = driver.findElement(By.xpath("//input[@name='adult1-f']"));
-        System.out.println("found this Name:" + nameMsg )
+        System.out.println("found this Name:" + nameMsg );
         Assert.assertEquals("Hassan", nameMsg);
     }   
     
