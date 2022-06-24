@@ -67,7 +67,10 @@ public class BrowserStackTestNGTest {
             accessKey = (String) config.get("key");
         }
         
-        
+        String accessKey = System.getenv("BROWSERSTACK_BUILD_NAME");
+        if(accessKey == null) {
+            accessKey = (String) config.get("buildName");
+        }
 
         if(capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true"){
             l = new Local();
