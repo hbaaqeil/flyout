@@ -4,7 +4,7 @@
   "key": "wSjYxBg5GttnDBqs5q3P",
 
   "capabilities": {
-    "build": "testing-flyout-browserstack",
+    "build": "jenkins-FlyOutTestNG-55",
     "name": "single_test",
     "browserstack.debug": true
   },
