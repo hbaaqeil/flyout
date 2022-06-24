@@ -22,6 +22,7 @@ public class FillFormAndSubmit extends BrowserStackTestNGTest {
         element4.sendKeys("Baaqeil");
         Thread.sleep(2000);
         element1.submit();
+        Thread.sleep(2000);
         String titleMsg = driver.getTitle().substring(0,22);
         Assert.assertEquals("Form Successfully Sent", titleMsg);
     }        
