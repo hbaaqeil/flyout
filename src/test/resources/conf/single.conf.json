@@ -10,8 +10,8 @@
   },
 
   "environments": {
-    "chrome": {
-      "browser": "chrome"
+    "opera": {
+      "browser": "opera"
     }
   }
 }
