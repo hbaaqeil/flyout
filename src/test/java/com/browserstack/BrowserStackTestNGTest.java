@@ -54,6 +54,7 @@ public class BrowserStackTestNGTest {
             Map.Entry pair = (Map.Entry)it.next();
             if(capabilities.getCapability(pair.getKey().toString()) == null){
                 capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
+                System.out.println(pair.getKey().toString() + " value is : " + pair.getValue().toString() );
             }
         }
 
