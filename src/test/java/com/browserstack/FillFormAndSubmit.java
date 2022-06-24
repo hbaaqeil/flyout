@@ -25,12 +25,19 @@ public class FillFormAndSubmit extends BrowserStackTestNGTest {
         Thread.sleep(2000);
     }
     
-    @Test(description = "Sending booking data and submitting the form! Test")
+    @Test(description = "Sending booking data and submitting the form! Assert1")
     public void test1() throws Exception {
        String titleMsg = driver.getTitle().substring(0,22);
         Assert.assertEquals("Form Successfully Sent", titleMsg);
     }        
 
+    @Test(description = "Sending booking data and submitting the form! Assert2")
+    public void test1() throws Exception {
+       String nameMsg = driver.findElement(By.xpath("//input[@name='adult1-f']"));
+        System.out.println("found this Name:" + nameMsg )
+        Assert.assertEquals("Hassan", nameMsg);
+    }   
+    
     @AfterMethod(alwaysRun = true)
     public void closeBrowser(){
         System.out.println("Closing down the browser");
