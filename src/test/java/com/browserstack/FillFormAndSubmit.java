@@ -15,7 +15,7 @@ public class FillFormAndSubmit extends BrowserStackTestNGTest {
         element1.sendKeys("0565133578");
         WebElement element2 = driver.findElement(By.id("email"));
         element2.clear();
-        element2.sendKeys("ahbaaqeil@gmail.com");
+        element2.sendKeys("hbaaqeil@gmail.com");
         WebElement element3 = driver.findElement(By.id("adult1-f"));
         element3.sendKeys("Hassan");
         WebElement element4 = driver.findElement(By.name("adult1-l"));
@@ -25,22 +25,24 @@ public class FillFormAndSubmit extends BrowserStackTestNGTest {
         Thread.sleep(2000);
     }
     
-    @Test(description = "Sending booking data and submitting the form! Assert1")
+    @Test(description = "Sending booking data and submitting the form was successful! Assert1")
     public void test1() throws Exception {
        String titleMsg = driver.getTitle().substring(0,22);
         Assert.assertEquals("Form Successfully Sent", titleMsg);
     }        
 
-    @Test(description = "Sending booking data and submitting the form! Assert2")
+    @Test(description = "Was first name correct?! Assert2")
     public void test2() throws Exception {
-       String nameMsg = driver.findElement(By.id("adult1-f")).getAttribute("value");
-        System.out.println("found this Name:" + nameMsg );
-        Assert.assertEquals("Hassan", nameMsg);
+       String nameFirst = driver.findElement(By.id("adult1-f")).getAttribute("value");
+        System.out.println("found this Name:" + nameFirst );
+        Assert.assertEquals("Hassan", nameFirst);
     }   
     
-    @AfterMethod(alwaysRun = true)
-    public void closeBrowser(){
-        System.out.println("Closing down the browser");
-        driver.close();
-    }
+    @Test(description = "Was correct name coorect! Assert3")
+    public void test3() throws Exception {
+       String nameLast = driver.findElement(By.id("adult1-l")).getAttribute("value");
+        System.out.println("found this Name:" + nameLast );
+        Assert.assertEquals("Baaqeil", nameLast);
+    }   
+   
 }
