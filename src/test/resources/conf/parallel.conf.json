@@ -10,8 +10,11 @@
   },
 
   "environments": {
-    "chrome": {
-      "browser": "chrome"
+    "opera": {
+      "browser": "opera"
+    },
+    "ie": {
+      "browser": "internet explorer"
     },
     "firefox": {
       "browser": "firefox"
@@ -19,8 +22,8 @@
     "edge": {
       "browser": "edge"
     },
-    "ie": {
-      "browser": "internet explorer"
+    "chrome": {
+      "browser": "chrome"
     }
   }
 }
