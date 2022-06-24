@@ -38,7 +38,7 @@ public class FillFormAndSubmit extends BrowserStackTestNGTest {
         Assert.assertEquals("Hassan", nameFirst);
     }   
     
-    @Test(description = "Was correct name coorect! Assert3")
+    @Test(description = "Was correct 2nd name coorect! Assert3")
     public void test3() throws Exception {
        String nameLast = driver.findElement(By.id("adult1-l")).getAttribute("value");
         System.out.println("found this Name:" + nameLast );
