@@ -73,6 +73,11 @@ public class BrowserStackTestNGTest {
             accessKey = (String) config.get("build");
         }
          System.out.println( "user:" + username + " access: " + accessKey + " build: " + buildName );
+        
+        String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
+        capabilities.setCapability("build", buildName);
+        System.out.println( "After: build: " + buildName );
+        
         if(capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true"){
             l = new Local();
             Map<String, String> options = new HashMap<String, String>();
