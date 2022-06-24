@@ -67,11 +67,9 @@ public class BrowserStackTestNGTest {
             accessKey = (String) config.get("key");
         }
         
-        String buildName  = System.getenv("BROWSERSTACK_BUILD_NAME");
-        if(buildName == null) {
-           
-            String build =  "jenkins-FlyOutTestNG-52";
-        }
+        String buildName =  "jenkins-FlyOutTestNG-53";
+        String build =  "jenkins-FlyOutTestNG-53";
+    
 
         if(capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true"){
             l = new Local();
