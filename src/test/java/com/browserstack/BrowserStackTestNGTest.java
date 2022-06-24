@@ -74,7 +74,7 @@ public class BrowserStackTestNGTest {
         }
          System.out.println( "user:" + username + " access: " + accessKey + " build: " + buildName );
         
-        String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
+        buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
         capabilities.setCapability("build", buildName);
         System.out.println( "After: build: " + buildName );
         
