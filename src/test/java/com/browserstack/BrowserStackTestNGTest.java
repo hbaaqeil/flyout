@@ -54,7 +54,7 @@ public class BrowserStackTestNGTest {
             Map.Entry pair = (Map.Entry)it.next();
             if(capabilities.getCapability(pair.getKey().toString()) == null){
                 capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
-                System.out.println( "[" + pair.getKey().toString() + "] =: " + pair.getValue().toString() );
+                
             }
         }
 
@@ -68,15 +68,9 @@ public class BrowserStackTestNGTest {
             accessKey = (String) config.get("key");
         }
         
-        String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
-        if(accessKey == null) {
-            accessKey = (String) config.get("build");
-        }
-         System.out.println( "user:" + username + " access: " + accessKey + " build: " + buildName );
-        
         buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
         capabilities.setCapability("build", buildName);
-        System.out.println( "After: build: " + buildName );
+       
         
         if(capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true"){
             l = new Local();
