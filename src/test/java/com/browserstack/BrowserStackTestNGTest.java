@@ -69,7 +69,7 @@ public class BrowserStackTestNGTest {
         
         String buildName  = System.getenv("BROWSERSTACK_BUILD_NAME");
         if(buildName == null) {
-            buildName = (String) config.get("build");
+            buildName = (String) config.get("buildName");
         }
 
         if(capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true"){
