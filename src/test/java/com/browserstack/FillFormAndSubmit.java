@@ -6,10 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 public class FillFormAndSubmit extends BrowserStackTestNGTest {
-
-    @Test(description = "Sending booking data and submitting the form! Test")
-    public void test() throws Exception {
+    @BeforeMethod
+    public void startBrowser() throws Exception {
         driver.get("http://54.76.177.255/forms/");
         WebElement element1 = driver.findElement(By.id("mobile"));
         element1.sendKeys("0565133578");
@@ -23,7 +23,11 @@ public class FillFormAndSubmit extends BrowserStackTestNGTest {
         Thread.sleep(2000);
         element1.submit();
         Thread.sleep(2000);
-        String titleMsg = driver.getTitle().substring(0,22);
+    }
+    
+    @Test(description = "Sending booking data and submitting the form! Test")
+    public void test1() throws Exception {
+       String titleMsg = driver.getTitle().substring(0,22);
         Assert.assertEquals("Form Successfully Sent", titleMsg);
     }        
 
